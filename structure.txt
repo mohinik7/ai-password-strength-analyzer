@@ -1,0 +1,22 @@
+project_root/
+├── backend/
+│   ├── app.py
+│   ├── normalizer.py
+│   ├── semantic_analyzer.py
+│   ├── context_parser.py
+│   ├── strength_evaluator.py
+│   ├── ml_model.py
+│   ├── dataset/
+│   │   └── passwords.csv
+│   └── requirements.txt
+├── frontend/
+│   ├── public/
+│   │      └── index.html
+│   └── src/
+│       ├── components/
+│       │   ├── PasswordInput.js
+│       │   ├── AnalysisResult.js
+│       │   └── Visualization.js
+│       ├── App.js
+│       └── index.js
+└── README.md
