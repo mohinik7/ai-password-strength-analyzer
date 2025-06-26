@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS  # Add CORS support
 from normalizer import normalize_password
-from semantic_analyzer import semantic_match
-from context_parser import parse_context
+# from semantic_analyzer import semantic_match  # Removed
+# from context_parser import parse_context  # Removed
 from strength_evaluator import evaluate_strength
 from ml_model import predict_strength
 
@@ -19,15 +19,15 @@ def analyze():
     password = data["password"]
 
     normalized = normalize_password(password)
-    semantic = semantic_match(normalized)
-    context = parse_context(normalized)
+    # semantic = semantic_match(normalized)  # Removed
+    # context = parse_context(normalized)    # Removed
     heuristic_score = evaluate_strength(normalized)
     ml_prediction = predict_strength(normalized)
 
     return jsonify({
         "normalized": normalized,
-        "semantic": semantic,
-        "context": context,
+        # "semantic": semantic,  # Removed
+        # "context": context,    # Removed
         "heuristic_strength": heuristic_score,
         "ml_prediction": ml_prediction
     })
